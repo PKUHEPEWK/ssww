@@ -4,7 +4,7 @@ from CRABClient.UserUtilities import config, getUsernameFromSiteDB
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = 'DoubleEG_D'
+config.General.requestName = 'MuonEG_D'
 config.General.transferLogs= True
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
@@ -23,7 +23,7 @@ config.Data.lumiMask = 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/
 
 config.Data.outLFNDirBase = '/store/user/%s/nano2016' % (getUsernameFromSiteDB())
 config.Data.publication = False
-config.Data.outputDatasetTag = 'DoubleEG_D'
+config.Data.outputDatasetTag = 'MuonEG_D'
 config.section_("Site")
 config.Site.storageSite = "T2_CH_CERNBOX"
 
