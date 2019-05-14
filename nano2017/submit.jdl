@@ -1,0 +1,18 @@
+getenv   = True
+Universe = vanilla
+
+Executable = haddnano.py
+
++AcctGroup ="higgs"
++AcctGroupUser  = "xiaoj"
+
+should_transfer_files = YES
+transfer_input_files = /workfs/cepc/xiaoj/cmssw-tmp/cmssw_setup.sh,/workfs/cepc/xiaoj/cmssw-tmp/sandbox-CMSSW_9_3_13-db785bf.tar.bz2,/cvmfs/cms.cern.ch/cmsset_default.sh
+Error = /scratchfs/cepc/xiaoj/sherpa/log/job.err_$(Cluster)-$(Process)
+Output = /scratchfs/cepc/xiaoj/sherpa/log/job.out_$(Cluster)-$(Process)
+Log = /scratchfs/cepc/xiaoj/sherpa/log/job.log_$(Cluster)
+
+#transfer_output_remaps = "mcfile_13TeV_wjets_lo_sherpa.yoda = mcfile_13TeV_wjets_lo_sherpa_$(Cluster)_$(Process).yoda"
+when_to_transfer_output = ON_EXIT
+
+Queue 10

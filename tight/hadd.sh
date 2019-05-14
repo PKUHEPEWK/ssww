@@ -1,0 +1,26 @@
+haddnano.py SingleMuon_E.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleMuon/SingleMuon_E/1904*/0000/tree_*
+haddnano.py SingleMuon_G.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleMuon/SingleMuon_G/1904*/0000/tree_*
+haddnano.py SingleMuon_H.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleMuon/SingleMuon_H/1904*/0000/tree_*
+haddnano.py DoubleEG_B.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_B/1904*/0000/tree_*
+haddnano.py DoubleEG_C.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_C/1904*/0000/tree_*
+haddnano.py DoubleEG_D.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_D/1904*/0000/tree_*
+haddnano.py DoubleEG_E.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_E/1904*/0000/tree_*
+haddnano.py DoubleEG_F.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_F/1904*/0000/tree_*
+haddnano.py DoubleEG_G.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleEG/DoubleEG_G/1904*/0000/tree_*
+haddnano.py DoubleMuon_C.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_C/1904*/0000/tree_*
+haddnano.py DoubleMuon_D.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_D/1904*/0000/tree_*
+haddnano.py DoubleMuon_E.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_E/1904*/0000/tree_*
+haddnano.py DoubleMuon_F.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_F/1904*/0000/tree_*
+haddnano.py DoubleMuon_G.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_G/1904*/0000/tree_*
+haddnano.py DoubleMuon_H.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/DoubleMuon/DoubleMuon_H/1904*/0000/tree_*
+haddnano.py MuonEG_C.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/MuonEG/MuonEG_C/1904*/0000/tree_*
+haddnano.py MuonEG_D.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/MuonEG/MuonEG_D/1904*/0000/tree_*
+haddnano.py MuonEG_E.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/MuonEG/MuonEG_E/1904*/0000/tree_*
+haddnano.py MuonEG_F.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/MuonEG/MuonEG_F/1904*/0000/tree_*
+haddnano.py MuonEG_H.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/MuonEG/MuonEG_H/1904*/0000/tree_*
+
+haddnano.py SingleElectron_B.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleElectron/SingleElectron_B/1904*/0000/tree_*
+haddnano.py SingleElectron_C.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleElectron/SingleElectron_C/1904*/0000/tree_*
+haddnano.py SingleElectron_D.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleElectron/SingleElectron_D/1904*/0000/tree_*
+haddnano.py SingleMuon_B.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleMuon/SingleMuon_B/1904*/0000/tree_*
+haddnano.py SingleMuon_F.root /pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016/SingleMuon/SingleMuon_F/1904*/0000/tree_*
