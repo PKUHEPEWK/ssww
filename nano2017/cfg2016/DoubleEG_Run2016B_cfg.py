@@ -9,8 +9,8 @@ config.General.transferLogs= False
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = 'PSet.py'
-config.JobType.scriptExe = 'crab_script.sh'
-config.JobType.inputFiles = ['crab_data_script.py','ssww_keep_and_drop.txt','ssww_output_branch_selection.txt','haddnano.py'] #hadd nano will not be needed once nano tools are in cmssw
+config.JobType.scriptExe = 'crab_script_data_2016.sh'
+config.JobType.inputFiles = ['crab_script_data_2016.py','ssww_keep_and_drop_2016.txt','ssww_output_branch_selection_2016.txt','haddnano.py'] #hadd nano will not be needed once nano tools are in cmssw
 config.JobType.sendPythonFolder  = True
 config.section_("Data")
 config.Data.inputDataset = '/DoubleEG/Run2016B_ver2-Nano14Dec2018_ver2-v1/NANOAOD'
@@ -21,7 +21,7 @@ config.Data.splitting = 'LumiBased'
 config.Data.unitsPerJob = 60
 config.Data.lumiMask = 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt'
 
-config.Data.outLFNDirBase ='/store/user/%s/nano2016' % (getUsernameFromSiteDB())
+config.Data.outLFNDirBase ='/store/user/%s/nano2016_v0' % (getUsernameFromSiteDB())
 config.Data.publication = False
 config.Data.outputDatasetTag = 'DoubleEG_Run2016B_2016'
 config.section_("Site")

@@ -1,20 +1,31 @@
 import os
+import argparse
+
+parser = argparse.ArgumentParser(description='manual to this script')
+parser.add_argument('-f','--fake', help='run fake configuration', dest='fakeable', type=bool, default=False)
+args = parser.parse_args()
 
 def new_py(year):
+    if args.fakeable:
+        isfake='_fr_'
+        isfake2='_fr'
+    else:
+        isfake=''
+        isfake2=''
     if year=='2017':
-        b = os.getcwd() + '/cfg2017/'
-        file_name='dataset_2017_nano_v4.py'
-        outdir='/store/user/%s/nano2017'
+        b = os.getcwd() + '/cfg%s2017/' %isfake
+        file_name='dataset_2017_nano_v4_new.py'
+        outdir='/store/user/%s/nano'+isfake+'2017_v0'
         golden_json="\'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/13TeV/ReReco/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt\'"
     elif year=='2018':
-        b = os.getcwd() + '/cfg2018/'
-        file_name='dataset_2018_nano_v4.py'
-        outdir='/store/user/%s/nano2018'
-        golden_json="\'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/PromptReco/Cert_314472-315801_13TeV_PromptReco_Collisions18_JSON.txt\'"
+        b = os.getcwd() + '/cfg%s2018/' %isfake
+        file_name='dataset_2018_nano_v4_new.py'
+        outdir='/store/user/%s/nano'+isfake+'2018_v0'
+        golden_json="\'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/ReReco/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt\'"
     elif year=='2016':
-        b = os.getcwd() + '/cfg2016/'
-        file_name='dataset_2016_nano_v4.py'
-        outdir='/store/user/%s/nano2016'
+        b = os.getcwd() + '/cfg%s2016/' %isfake
+        file_name='dataset_2016_nano_v4_new.py'
+        outdir='/store/user/%s/nano'+isfake+'2016_v0'
         golden_json="\'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt\'"
 
     handle=open(file_name,"r")
@@ -30,18 +41,19 @@ def new_py(year):
     for iSample in _Samples :
         file=iSample+'_cfg.py'
         print(file)
-        str_list={}
-        script = 'crab_script.py'
+        # str_list={}
+        bsh = 'crab_script%s_%s.sh' %(isfake2,year)
+        script = 'crab_script%s_%s.py' %(isfake2,year)
         split = 'FileBased'
         unitsPerJob = '20'
         lumiMask = "config.Data.totalUnits = -1"
         for iiSample in _Samples[iSample]:
             print(iiSample)
-
             if iiSample == "nanoAOD":
-                script = 'crab_data_script.py'
+                bsh = 'crab_script_data%s_%s.sh' %(isfake2,year)
+                script = 'crab_script_data%s_%s.py' %(isfake2,year)
                 split='LumiBased'
-                unitsPerJob = '60'
+                unitsPerJob = '100'
                 lumiMask="config.Data.lumiMask = %s" %golden_json
             tmp_str=_Samples[iSample][iiSample]   # dataset
             #str_list.append(iSample)    # sample name
@@ -64,8 +76,8 @@ def new_py(year):
         file_content+="config.section_(\"JobType\")\n"
         file_content+="config.JobType.pluginName = \'Analysis\'\n"
         file_content+="config.JobType.psetName = \'PSet.py\'\n"
-        file_content+="config.JobType.scriptExe = \'crab_script.sh\'\n"
-        file_content+="config.JobType.inputFiles = [\'%s\',\'ssww_keep_and_drop.txt\',\'ssww_output_branch_selection.txt\',\'haddnano.py\'] #hadd nano will not be needed once nano tools are in cmssw\n" %script
+        file_content+="config.JobType.scriptExe = \'%s\'\n" %bsh
+        file_content+="config.JobType.inputFiles = [\'%s\',\'ssww_keep_and_drop_%s.txt\',\'ssww_output_branch_selection_%s.txt\',\'haddnano.py\'] #hadd nano will not be needed once nano tools are in cmssw\n" %(script,year,year)
         file_content+="config.JobType.sendPythonFolder  = True\n"
         file_content+="config.section_(\"Data\")\nconfig.Data.inputDataset = \'%s\'\n" %_Samples[iSample][iiSample]
         file_content+="#config.Data.inputDBS = \'phys03\'\n"

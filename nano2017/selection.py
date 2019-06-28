@@ -1,4 +1,17 @@
 selection = {}
+# preselection selection
+selection['preselection']['lepton_pt_cut'] = [25.,20.]
+selection['preselection']['jet_pt_cut'] = 50.
+selection['preselection']['zmass_cut'] = 15.
+selection['preselection']['mll_cut'] = 20.
+selection['preselection']['mlll_cut'] = -9999.
+selection['preselection']['met_cut'] = 30.
+selection['preselection']['bjet_veto'] = True
+selection['preselection']['tau_veto'] = True
+selection['preselection']['zeppenfeld'] = 0.75
+selection['preselection']['mjj_cut'] = 500.
+selection['preselection']['detajj_cut'] = 2.5
+
 # ssww selection
 selection['ssww']['lepton_pt_cut'] = [25.,20.]
 selection['ssww']['jet_pt_cut'] = 50.

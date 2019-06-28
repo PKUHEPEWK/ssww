@@ -9,8 +9,8 @@ config.General.transferLogs= False
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = 'PSet.py'
-config.JobType.scriptExe = 'crab_script.sh'
-config.JobType.inputFiles = ['crab_script.py','ssww_keep_and_drop.txt','ssww_output_branch_selection.txt','haddnano.py'] #hadd nano will not be needed once nano tools are in cmssw
+config.JobType.scriptExe = 'crab_script_2016.sh'
+config.JobType.inputFiles = ['crab_script_2016.py','ssww_keep_and_drop_2016.txt','ssww_output_branch_selection_2016.txt','haddnano.py'] #hadd nano will not be needed once nano tools are in cmssw
 config.JobType.sendPythonFolder  = True
 config.section_("Data")
 config.Data.inputDataset = '/WZTo3LNu_2Jets_MLL-4To50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM'
@@ -21,7 +21,7 @@ config.Data.splitting = 'FileBased'
 config.Data.unitsPerJob = 20
 config.Data.totalUnits = -1
 
-config.Data.outLFNDirBase ='/store/user/%s/nano2016' % (getUsernameFromSiteDB())
+config.Data.outLFNDirBase ='/store/user/%s/nano2016_v0' % (getUsernameFromSiteDB())
 config.Data.publication = False
 config.Data.outputDatasetTag = 'WZTo3LNu_2Jets_MLL-4to50_2016'
 config.section_("Site")
